@@ -1,0 +1,381 @@
+body {
+  background: #999;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  min-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: serif;
+  font-weight: normal;
+  font-size: 1.7rem;
+}
+
+@font-face {
+  font-family: "TeleTekst";
+  src: url("../font/TeleTekst.ttf") format("truetype"),
+    url("../font/TeleTekst.woff") format("woff");
+}
+.teletekst {
+  background-color: black;
+}
+.teletekst .word {
+  font-family: "TeleTekst";
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  color: white;
+}
+.teletekst .jenny::after {
+  color: yellow;
+}
+.teletekst .vasilis::after {
+  color: cyan;
+}
+
+.sansserif {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  color: white;
+  background-color: #222;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+footer a {
+  color: white;
+  padding-left: 1rem;
+}
+
+#menu.visible {
+  visibility: visible;
+  display: flex;
+  position: absolute;
+  top: 2.5vh;
+  right: 14vw;
+  list-style-type: none;
+  background: rgba(51, 51, 51, 1);
+  padding: 1rem;
+  flex-direction: column;
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#menu.visible li {
+  padding: 0.25rem 0;
+  color: white;
+}
+
+#menu {
+  visibility: hidden;
+  display: none;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+}
+
+header button {
+  background-color: rgba(0, 0, 0, 0.67);
+  color: white;
+  border: none;
+}
+
+.vasilis {
+  align-self: flex-start;
+  background-color: rgba(150, 200, 255, 0.125);
+}
+
+.jenny {
+  align-self: flex-end;
+  background-color: rgba(255, 192, 203, 0.125);
+}
+
+.stroke .word::after {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.word {
+  position: relative;
+  white-space: nowrap;
+  color: black;
+  display: flex;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+}
+
+.vasilis::after {
+  color: rgba(150, 200, 255, 1);
+}
+
+.jenny::after {
+  color: rgba(255, 192, 203, 1);
+}
+
+.word::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  overflow: hidden;
+  animation: moveText 2.5s linear both;
+  animation-play-state: running;
+}
+
+.pause .word::after {
+  animation-play-state: paused !important;
+}
+
+/*Vasil*/
+
+.word:nth-child(1) {
+  margin-top: 4rem;
+}
+
+.word:nth-child(2)::after {
+  /*A series of*/
+  animation-duration: 5.5s;
+  animation-delay: 3s;
+}
+
+.word:nth-child(3)::after {
+  /*in this*/
+  animation-duration: 3.5s;
+  animation-delay: 9s;
+}
+
+.word:nth-child(4)::after {
+  /*Jenny is*/
+  animation-duration: 2.5s;
+  animation-delay: 13s;
+}
+
+.word:nth-child(5)::after {
+  /*a public*/
+  animation-duration: 5.5s;
+  animation-delay: 16s;
+}
+
+.word:nth-child(6)::after {
+  /*One of*/
+  animation-duration: 2.5s;
+  animation-delay: 22s;
+}
+
+.word:nth-child(7)::after {
+  /*So*/
+  animation-duration: 5.5s;
+  animation-delay: 25s;
+}
+
+.word:nth-child(8)::after {
+  /*We talk*/
+  animation-duration: 4.5s;
+  animation-delay: 31s;
+}
+
+.word:nth-child(9)::after {
+  /*And we*/
+  animation-duration: 4.5s;
+  animation-delay: 36s;
+}
+
+.word:nth-child(10) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(10)::after {
+  /*Among*/
+  animation-duration: 6.5s;
+  animation-delay: 41s;
+}
+
+/*Jenny*/
+
+.word:nth-child(11)::after {
+  /*What makes*/
+  animation-duration: 1.5s;
+  animation-delay: 48s;
+}
+
+.word:nth-child(12)::after {
+  /*So my*/
+  animation-duration: 7.5s;
+  animation-delay: 50s;
+}
+
+.word:nth-child(13)::after {
+  /*So I*/
+  animation-duration: 5.5s;
+  animation-delay: 59s;
+}
+
+.word:nth-child(14)::after {
+  /*If it*/
+  animation-duration: 7.5s;
+  animation-delay: 67s;
+}
+
+.word:nth-child(15)::after {
+  /*Great*/
+  animation-duration: 1.5s;
+  animation-delay: 73s;
+}
+
+.word:nth-child(16)::after {
+  /*And like I*/
+  animation-duration: 5.5s;
+  animation-delay: 76s;
+}
+
+.word:nth-child(17) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(17)::after {
+  /*If it*/
+  animation-duration: 8.5s;
+  animation-delay: 81s;
+}
+
+/*Vas*/
+
+.word:nth-child(18)::after {
+  /*Okay*/
+  animation-duration: 7.5s;
+  animation-delay: 90s;
+}
+
+.word:nth-child(19) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(19)::after {
+  /*We are*/
+  animation-duration: 9.5s;
+  animation-delay: 98s;
+}
+
+/* Jenny */
+
+.word:nth-child(20)::after {
+  /*It is*/
+  animation-duration: 5.5s;
+  animation-delay: 109s;
+}
+
+.word:nth-child(21) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(21)::after {
+  /*good is*/
+  animation-duration: 4.5s;
+  animation-delay: 115s;
+}
+
+/* Vas */
+
+.word:nth-child(22)::after {
+  /*okay*/
+  animation-duration: 4.5s;
+  animation-delay: 120s;
+}
+
+.word:nth-child(23) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(23)::after {
+  /*Good for*/
+  animation-duration: 6.5s;
+  animation-delay: 125s;
+}
+
+/* Jenny */
+
+.word:nth-child(24) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(24)::after {
+  /*Good for*/
+  animation-duration: 2.5s;
+  animation-delay: 132s;
+}
+
+/* Vas */
+
+.word:nth-child(25) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(25)::after {
+  /*yeah so*/
+  animation-duration: 2.5s;
+  animation-delay: 136s;
+}
+
+/* Jenny */
+
+.word:nth-child(26) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(26)::after {
+  /*excellent*/
+  animation-duration: 2.5s;
+  animation-delay: 139s;
+}
+
+/* Vas */
+
+.word:nth-child(27) {
+  margin-bottom: 5vh;
+}
+
+.word:nth-child(27)::after {
+  /*Okay and what*/
+  animation-duration: 2.5s;
+  animation-delay: 142s;
+}
+
+@keyframes moveText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
